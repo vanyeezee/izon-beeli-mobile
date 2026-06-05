@@ -216,11 +216,11 @@ export default function LessonScreen() {
               <View style={{
                 flexDirection: "row", alignItems: "center", gap: 5,
                 paddingHorizontal: 10, paddingVertical: 5, borderRadius: 999,
-                backgroundColor: "rgba(74, 222, 128, 0.12)",
-                borderWidth: 1, borderColor: "rgba(74, 222, 128, 0.25)",
+                backgroundColor: M.successBg,
+                borderWidth: 1, borderColor: M.successBorder,
               }}>
-                <IconSymbol name="checkmark.circle.fill" size={12} color="#4ade80" />
-                <Text style={{ fontSize: 10, fontWeight: "800", color: "#4ade80", letterSpacing: 0.5 }}>
+                <IconSymbol name="checkmark.circle.fill" size={12} color={M.success} />
+                <Text style={{ fontSize: 10, fontWeight: "800", color: M.success, letterSpacing: 0.5 }}>
                   {t("lesson.done").toUpperCase()}
                 </Text>
               </View>
@@ -275,15 +275,15 @@ export default function LessonScreen() {
                   flexDirection: "row", alignItems: "center", gap: 7,
                   paddingHorizontal: 14, paddingVertical: 10, borderRadius: 999,
                   borderWidth: 1,
-                  borderColor: "rgba(74, 222, 128, 0.35)",
-                  backgroundColor: "rgba(74, 222, 128, 0.08)",
+                  borderColor: M.successBorder,
+                  backgroundColor: M.successBg,
                 }}
                 className="active:opacity-75"
                 accessibilityRole="button"
                 accessibilityLabel={isSong ? t("songs.listened") : t("lesson.markComplete")}
               >
-                <IconSymbol name="checkmark.circle.fill" size={14} color="#4ade80" />
-                <Text style={{ fontSize: 13, fontWeight: "700", color: "#4ade80" }}>
+                <IconSymbol name="checkmark.circle.fill" size={14} color={M.success} />
+                <Text style={{ fontSize: 13, fontWeight: "700", color: M.success }}>
                   {isSong ? t("songs.listened") : t("lesson.markComplete")}
                 </Text>
               </Pressable>
@@ -330,10 +330,10 @@ export default function LessonScreen() {
                 <View style={{
                   width: 68, height: 68, borderRadius: 34,
                   alignItems: "center", justifyContent: "center",
-                  backgroundColor: "rgba(74, 222, 128, 0.12)",
-                  borderWidth: 1.5, borderColor: "rgba(74, 222, 128, 0.3)",
+                  backgroundColor: M.successBg,
+                  borderWidth: 1.5, borderColor: M.successBorder,
                 }}>
-                  <IconSymbol name="checkmark.circle.fill" size={36} color="#4ade80" />
+                  <IconSymbol name="checkmark.circle.fill" size={36} color={M.success} />
                 </View>
                 <Text style={{ marginTop: 12, fontSize: 22, fontWeight: "900", color: M.text, letterSpacing: -0.3 }}>
                   {t("lesson.summary")}
@@ -364,10 +364,10 @@ export default function LessonScreen() {
                 {lesson.duration && (
                   <View style={{
                     flex: 1, alignItems: "center", paddingVertical: 16, borderRadius: 16,
-                    backgroundColor: "rgba(74, 222, 128, 0.08)",
-                    borderWidth: 1, borderColor: "rgba(74, 222, 128, 0.2)",
+                    backgroundColor: M.successBg,
+                    borderWidth: 1, borderColor: M.successBorder,
                   }}>
-                    <Text style={{ fontSize: 26, fontWeight: "900", color: "#4ade80" }}>
+                    <Text style={{ fontSize: 26, fontWeight: "900", color: M.success }}>
                       {formatDuration(lesson.duration)}
                     </Text>
                     <Text style={{ marginTop: 4, fontSize: 10, fontWeight: "700", letterSpacing: 1, textTransform: "uppercase", color: M.sub }}>
@@ -443,15 +443,15 @@ export default function LessonScreen() {
                     }
                     style={{
                       flex: 1, alignItems: "center", paddingVertical: 16, borderRadius: 16,
-                      borderWidth: 1, borderColor: "rgba(74, 222, 128, 0.25)",
-                      backgroundColor: "rgba(74, 222, 128, 0.06)",
+                      borderWidth: 1, borderColor: M.successBorder,
+                      backgroundColor: M.successBg,
                     }}
                     className="active:opacity-70"
                     accessibilityRole="button"
                     accessibilityLabel={t("lesson.reviewWords")}
                   >
-                    <IconSymbol name="brain.head.profile" size={18} color="#4ade80" />
-                    <Text style={{ marginTop: 5, fontSize: 12, fontWeight: "700", color: "#4ade80" }}>
+                    <IconSymbol name="brain.head.profile" size={18} color={M.success} />
+                    <Text style={{ marginTop: 5, fontSize: 12, fontWeight: "700", color: M.success }}>
                       {t("lesson.reviewWords")}
                     </Text>
                   </Pressable>
