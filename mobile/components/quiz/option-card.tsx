@@ -16,22 +16,22 @@ export function OptionCard({
 
   const bgColor = {
     default: M.card,
-    correct: "#22c55e20",
-    incorrect: "#ef444420",
+    correct: M.successBg,
+    incorrect: M.errorBg,
     dimmed: M.card,
   }[state];
 
   const borderColor = {
     default: M.border,
-    correct: "#22c55e",
-    incorrect: "#ef4444",
+    correct: M.success,
+    incorrect: M.error,
     dimmed: M.border,
   }[state];
 
   const textColor = {
     default: M.text,
-    correct: "#22c55e",
-    incorrect: "#ef4444",
+    correct: M.success,
+    incorrect: M.error,
     dimmed: M.muted,
   }[state];
 

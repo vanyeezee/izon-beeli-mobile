@@ -38,6 +38,23 @@ export function useMuseumTheme() {
     accentGlow:   dark ? "rgba(196,134,42,0.15)" : "rgba(196,134,42,0.10)",
     accentLight:  "#F5E8CC",
 
+    // ── Semantic state (mode-aware) ──────────────────────────────
+    // Replaces the hardcoded #22c55e/#4ade80/#ef4444/#f97316 literals that
+    // were scattered across screens. Foreground stays legible on each mode's
+    // background; *Bg / *Border are the subtle fill + outline for pills/cards.
+    success:       dark ? "#4ADE80" : "#16A34A",
+    successBg:     dark ? "rgba(74,222,128,0.12)"  : "rgba(22,163,74,0.10)",
+    successBorder: dark ? "rgba(74,222,128,0.25)"  : "rgba(22,163,74,0.25)",
+    error:         dark ? "#F87171" : "#DC2626",
+    errorBg:       dark ? "rgba(248,113,113,0.12)" : "rgba(220,38,38,0.10)",
+    errorBorder:   dark ? "rgba(248,113,113,0.25)" : "rgba(220,38,38,0.25)",
+    warning:       dark ? "#FBBF24" : "#D97706",
+    warningBg:     dark ? "rgba(251,191,36,0.12)"  : "rgba(217,119,6,0.10)",
+    warningBorder: dark ? "rgba(251,191,36,0.25)"  : "rgba(217,119,6,0.25)",
+    info:          dark ? "#60A5FA" : "#2563EB",
+    infoBg:        dark ? "rgba(96,165,250,0.12)"  : "rgba(37,99,235,0.10)",
+    infoBorder:    dark ? "rgba(96,165,250,0.25)"  : "rgba(37,99,235,0.25)",
+
     // ── Input fields ─────────────────────────────────────────────
     inputBg:          dark ? "#161826" : "#FDFAF5",
     inputBorder:      dark ? "#2E3245" : "#D4C9B8",

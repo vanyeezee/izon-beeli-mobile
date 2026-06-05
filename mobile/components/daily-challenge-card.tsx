@@ -58,19 +58,19 @@ function ChallengeItem({ challenge }: { challenge: DailyChallenge }) {
               style={{
                 height: "100%", borderRadius: 999,
                 width: `${Math.round(progress * 100)}%`,
-                backgroundColor: challenge.completed ? "#22c55e" : config.color,
+                backgroundColor: challenge.completed ? M.success : config.color,
               }}
             />
           </View>
           <Text style={{ marginTop: 2, fontSize: 10, color: M.muted }}>
             {challenge.progress} / {challenge.target}
             {challenge.completed && (
-              <Text style={{ fontWeight: "600", color: "#22c55e" }}> · {t("learn.complete")}</Text>
+              <Text style={{ fontWeight: "600", color: M.success }}> · {t("learn.complete")}</Text>
             )}
           </Text>
         </View>
         {challenge.completed ? (
-          <IconSymbol name="checkmark.circle.fill" size={18} color="#22c55e" style={{ marginLeft: 8 }} />
+          <IconSymbol name="checkmark.circle.fill" size={18} color={M.success} style={{ marginLeft: 8 }} />
         ) : (
           <IconSymbol name="chevron.right" size={14} color={M.muted} style={{ marginLeft: 8 }} />
         )}
@@ -81,6 +81,7 @@ function ChallengeItem({ challenge }: { challenge: DailyChallenge }) {
 
 export function DailyChallengeCards() {
   const { t } = useTranslation();
+  const M = useMuseumTheme();
   const { data: challenges, isLoading } = useTodayChallenges();
   const regenerate = useRegenerateDailyChallenges();
   const [isRefreshing, setIsRefreshing] = useState(false);
@@ -115,11 +116,11 @@ export function DailyChallengeCards() {
           className="active:opacity-60"
         >
           {isRefreshing ? (
-            <ActivityIndicator size="small" color="#9ca3af" />
+            <ActivityIndicator size="small" color={M.muted} />
           ) : (
             <>
-              <IconSymbol name="arrow.clockwise" size={13} color="#9ca3af" />
-              <Text style={{ fontSize: 12, color: "#9ca3af" }}>
+              <IconSymbol name="arrow.clockwise" size={13} color={M.muted} />
+              <Text style={{ fontSize: 12, color: M.muted }}>
                 {t("dailyChallenge.refresh")}
               </Text>
             </>
