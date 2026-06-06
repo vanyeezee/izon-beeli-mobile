@@ -84,9 +84,9 @@ function OptionTile({
   onPress: () => void;
 }) {
   const M = useMuseumTheme();
-  const bg = { default: M.card, correct: "#22c55e20", incorrect: "#ef444420", dimmed: M.card }[state];
-  const border = { default: M.border, correct: "#22c55e", incorrect: "#ef4444", dimmed: M.border }[state];
-  const color = { default: M.text, correct: "#22c55e", incorrect: "#ef4444", dimmed: M.muted }[state];
+  const bg = { default: M.card, correct: M.successBg, incorrect: M.errorBg, dimmed: M.card }[state];
+  const border = { default: M.border, correct: M.success, incorrect: M.error, dimmed: M.border }[state];
+  const color = { default: M.text, correct: M.success, incorrect: M.error, dimmed: M.muted }[state];
   return (
     <Pressable
       onPress={onPress}

@@ -168,7 +168,7 @@ export default function DictationScreen() {
   if (!current) return null;
 
   const inputBorderColor = checked
-    ? (result && (result.exact || result.pct >= 80)) ? "#22c55e" : "#ef4444"
+    ? (result && (result.exact || result.pct >= 80)) ? M.success : M.error
     : M.inputBorder;
 
   return (
@@ -234,8 +234,8 @@ export default function DictationScreen() {
 
             {/* Result feedback */}
             {checked && result && (
-              <View style={{ marginTop: 14, borderRadius: 12, padding: 14, backgroundColor: (result.exact || result.pct >= 80) ? "#22c55e10" : "#ef444410", borderWidth: 1, borderColor: (result.exact || result.pct >= 80) ? "#22c55e40" : "#ef444440" }}>
-                <Text style={{ fontSize: 12, fontWeight: "800", letterSpacing: 1.2, color: (result.exact || result.pct >= 80) ? "#22c55e" : "#ef4444", marginBottom: 6 }}>
+              <View style={{ marginTop: 14, borderRadius: 12, padding: 14, backgroundColor: (result.exact || result.pct >= 80) ? M.successBg : M.errorBg, borderWidth: 1, borderColor: (result.exact || result.pct >= 80) ? M.successBorder : M.errorBorder }}>
+                <Text style={{ fontSize: 12, fontWeight: "800", letterSpacing: 1.2, color: (result.exact || result.pct >= 80) ? M.success : M.error, marginBottom: 6 }}>
                   {result.exact ? "PERFECT!" : result.pct >= 80 ? `CLOSE — ${result.pct}%` : `${result.pct}% MATCH`}
                 </Text>
                 <Text style={{ fontSize: 11, fontWeight: "700", color: M.muted, marginBottom: 3 }}>CORRECT PHRASE</Text>

@@ -219,8 +219,8 @@ export default function WordChallengeScreen() {
                 </Pressable>
               </View>
               {recordingDone && (
-                <View style={{ width: "100%", borderRadius: 12, padding: 14, backgroundColor: "#22c55e10", borderWidth: 1, borderColor: "#22c55e30" }}>
-                  <Text style={{ fontSize: 14, fontWeight: "700", color: "#22c55e", textAlign: "center" }}>Recording saved! Compare with Listen above.</Text>
+                <View style={{ width: "100%", borderRadius: 12, padding: 14, backgroundColor: M.successBg, borderWidth: 1, borderColor: M.successBorder }}>
+                  <Text style={{ fontSize: 14, fontWeight: "700", color: M.success, textAlign: "center" }}>Recording saved! Compare with Listen above.</Text>
                 </View>
               )}
             </View>
@@ -252,9 +252,9 @@ export default function WordChallengeScreen() {
                   </Pressable>
                 </>
               ) : (
-                <View style={{ borderRadius: 14, padding: 20, backgroundColor: "#22c55e10", borderWidth: 1, borderColor: "#22c55e30", alignItems: "center", gap: 8 }}>
-                  <IconSymbol name="checkmark.circle.fill" size={32} color="#22c55e" />
-                  <Text style={{ fontSize: 16, fontWeight: "700", color: "#22c55e" }}>Sentence submitted!</Text>
+                <View style={{ borderRadius: 14, padding: 20, backgroundColor: M.successBg, borderWidth: 1, borderColor: M.successBorder, alignItems: "center", gap: 8 }}>
+                  <IconSymbol name="checkmark.circle.fill" size={32} color={M.success} />
+                  <Text style={{ fontSize: 16, fontWeight: "700", color: M.success }}>Sentence submitted!</Text>
                   <Text style={{ fontSize: 13, color: M.sub, textAlign: "center" }}>Your sentence has been shared with the community.</Text>
                 </View>
               )}

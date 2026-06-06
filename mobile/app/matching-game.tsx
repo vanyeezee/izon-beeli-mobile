@@ -137,8 +137,8 @@ export default function MatchingGameScreen() {
           </View>
         ) : phase === "results" && result ? (
           <View style={{ flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: 32 }}>
-            <View style={{ marginBottom: 24, height: 112, width: 112, alignItems: "center", justifyContent: "center", borderRadius: 56, backgroundColor: "#22c55e20", borderWidth: 1, borderColor: "#22c55e40" }}>
-              <Text style={{ fontSize: 28, fontWeight: "700", color: "#22c55e" }}>{result.accuracy}%</Text>
+            <View style={{ marginBottom: 24, height: 112, width: 112, alignItems: "center", justifyContent: "center", borderRadius: 56, backgroundColor: M.successBg, borderWidth: 1, borderColor: M.successBorder }}>
+              <Text style={{ fontSize: 28, fontWeight: "700", color: M.success }}>{result.accuracy}%</Text>
             </View>
 
             <Text style={{ marginBottom: 8, fontSize: 24, fontWeight: "700", color: M.text }}>{t("matching.allMatched")}</Text>

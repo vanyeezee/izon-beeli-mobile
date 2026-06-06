@@ -214,7 +214,7 @@ export default function RecallBingoScreen() {
             A word is called — tap the matching tile on your card. Get a line to win!
           </Text>
           {!canStart && (
-            <Text style={{ marginTop: 12, fontSize: 12, color: "#ef4444", textAlign: "center" }}>
+            <Text style={{ marginTop: 12, fontSize: 12, color: M.error, textAlign: "center" }}>
               Not enough words available yet. Keep learning to unlock Bingo!
             </Text>
           )}

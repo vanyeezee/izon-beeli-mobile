@@ -180,7 +180,7 @@ export default function SentenceBuilderScreen() {
   if (!current) return null;
 
   const answerBorderColor = checked
-    ? correct ? "#22c55e" : "#ef4444"
+    ? correct ? M.success : M.error
     : M.border;
 
   return (
@@ -207,7 +207,7 @@ export default function SentenceBuilderScreen() {
               borderRadius: 14,
               borderWidth: 2,
               borderColor: answerBorderColor,
-              backgroundColor: checked ? (correct ? "#22c55e08" : "#ef444408") : "transparent",
+              backgroundColor: checked ? (correct ? M.successBg : M.errorBg) : "transparent",
               minHeight: 56,
               padding: 12,
               flexDirection: "row",
@@ -223,19 +223,19 @@ export default function SentenceBuilderScreen() {
               <Pressable
                 key={tile.id}
                 onPress={() => tapPlaced(tile)}
-                style={{ borderRadius: 8, paddingHorizontal: 12, paddingVertical: 7, backgroundColor: checked ? (correct ? "#22c55e20" : "#ef444420") : `${M.accent}15`, borderWidth: 1, borderColor: checked ? (correct ? "#22c55e50" : "#ef444450") : `${M.accent}40` }}
+                style={{ borderRadius: 8, paddingHorizontal: 12, paddingVertical: 7, backgroundColor: checked ? (correct ? M.successBg : M.errorBg) : `${M.accent}15`, borderWidth: 1, borderColor: checked ? (correct ? M.successBorder : M.errorBorder) : `${M.accent}40` }}
                 className="active:opacity-60"
               >
-                <Text style={{ fontSize: 14, fontWeight: "600", color: checked ? (correct ? "#22c55e" : "#ef4444") : M.accent }}>{tile.text}</Text>
+                <Text style={{ fontSize: 14, fontWeight: "600", color: checked ? (correct ? M.success : M.error) : M.accent }}>{tile.text}</Text>
               </Pressable>
             ))}
           </Animated.View>
 
           {/* Reveal answer on incorrect */}
           {checked && !correct && (
-            <View style={{ borderRadius: 12, backgroundColor: "#22c55e08", borderWidth: 1, borderColor: "#22c55e30", padding: 12, marginBottom: 16 }}>
-              <Text style={{ fontSize: 10, fontWeight: "800", letterSpacing: 1.5, color: "#22c55e", marginBottom: 4 }}>CORRECT ANSWER</Text>
-              <Text style={{ fontSize: 14, color: "#22c55e", fontWeight: "600" }}>{current.sentence}</Text>
+            <View style={{ borderRadius: 12, backgroundColor: M.successBg, borderWidth: 1, borderColor: M.successBorder, padding: 12, marginBottom: 16 }}>
+              <Text style={{ fontSize: 10, fontWeight: "800", letterSpacing: 1.5, color: M.success, marginBottom: 4 }}>CORRECT ANSWER</Text>
+              <Text style={{ fontSize: 14, color: M.success, fontWeight: "600" }}>{current.sentence}</Text>
             </View>
           )}
 
